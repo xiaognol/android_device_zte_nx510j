@@ -213,6 +213,12 @@ TARGET_GLOBAL_CPPFLAGS += -DANDROID_MULTI_SIM
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
 
+# MK Hardware
+BOARD_USES_MOKEE_HARDWARE := true
+BOARD_HARDWARE_CLASS += \
+	    device/zte/nx510j/mkhw \
+	    hardware/mokee/mkhw
+
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
